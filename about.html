@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Security & Page Speed Meta Tags -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Learn about Sinendaba Charity Centre's history since 2015, founded by Gomolemo Keetse and Ntando Motau to support homeless children and families in Tembisa.">
+    <meta name="keywords" content="About Sinendaba, history, mission, vision, founders, Gomolemo Keetse, Ntando Motau, Tembisa charity">
+    <meta name="author" content="Sinendaba Charity Centre">
+    <link rel="canonical" href="https://www.sinendaba.org/index.html">
+
+    <!-- Social Media (Open Graph & Twitter Cards for Off-Page SEO) -->
+    <meta property="og:title" content="About Us | Sinendaba Charity Centre - History, Mission & Team">
+    <meta property="og:description" content="Learn about Sinendaba Charity Centre's history since 2015, founded by Gomolemo Keetse and Ntando Motau to support homeless children and families in Tembisa.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.sinendaba.org/">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=1200&auto=format&fit=crop">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About Us | Sinendaba Charity Centre - History, Mission & Team">
+    <meta name="twitter:description" content="Learn about Sinendaba Charity Centre's history since 2015, founded by Gomolemo Keetse and Ntando Motau to support homeless children and families in Tembisa.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=1200&auto=format&fit=crop">
+
+    <title>About Us | Sinendaba Charity Centre - History, Mission & Team</title>
+    
+    <!-- Resource Hints for Page Speed optimization -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            slate: '#2c3e50',
+                            green: '#27ae60',
+                            blue: '#3498db',
+                            dark: '#1a252f',
+                            light: '#f8fafc'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Local SEO JSON-LD Structured Data Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NGO",
+      "name": "Sinendaba Charity Centre",
+      "url": "https://www.sinendaba.org",
+      "logo": "https://www.sinendaba.org/logo.png",
+      "foundingDate": "2015",
+      "founders": [
+        { "@type": "Person", "name": "Gomolemo Keetse" },
+        { "@type": "Person", "name": "Ntando Motau" }
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Tembisa",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-25.9964",
+        "longitude": "28.2268"
+      },
+      "telephone": "+27827658796",
+      "email": "info@Sinendaba.org",
+      "sameAs": [
+        "https://facebook.com/SinendabaCharity",
+        "https://twitter.com/SinendabaOrg",
+        "https://instagram.com/SinendabaCharity"
+      ]
+    }
+    </script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen"><nav class="bg-slate-800 text-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-full bg-emerald-500 flex items-center justify-center font-bold text-white shadow-sm text-lg">S</div>
+                <a href="index.html" class="font-bold text-xl tracking-tight text-white hover:text-emerald-400 transition">Sinendaba Charity Centre</a>
+            </div>
+            <div class="hidden md:flex items-center space-x-1 font-medium text-sm">
+                <a href="index.html" class="nav-link px-3 py-2 rounded-md hover:bg-slate-700 transition">Home</a>
+                <a href="about.html" class="nav-link px-3 py-2 rounded-md hover:bg-slate-700 transition">About Us</a>
+                <a href="services.html" class="nav-link px-3 py-2 rounded-md hover:bg-slate-700 transition">Services</a>
+                <a href="enquiry.html" class="nav-link px-3 py-2 rounded-md hover:bg-slate-700 transition">Enquiry</a>
+                <a href="contact.html" class="nav-link px-3 py-2 rounded-md hover:bg-slate-700 transition">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-btn" class="p-2 rounded-md text-slate-300 hover:text-white hover:bg-slate-700 focus:outline-none" aria-label="Toggle Navigation Menu">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-slate-900 px-4 pt-2 pb-4 space-y-1 text-sm border-t border-slate-800">
+        <a href="index.html" class="block px-3 py-2 rounded-md text-slate-200 hover:bg-slate-800">Home</a>
+        <a href="about.html" class="block px-3 py-2 rounded-md text-slate-200 hover:bg-slate-800">About Us</a>
+        <a href="services.html" class="block px-3 py-2 rounded-md text-slate-200 hover:bg-slate-800">Services</a>
+        <a href="enquiry.html" class="block px-3 py-2 rounded-md text-slate-200 hover:bg-slate-800">Enquiry</a>
+        <a href="contact.html" class="block px-3 py-2 rounded-md text-slate-200 hover:bg-slate-800">Contact</a>
+    </div>
+</nav>
+<main class="flex-grow max-w-7xl mx-auto px-4 py-10 sm:px-6 lg:px-8 w-full">
+    <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 sm:p-10 space-y-10">
+        <!-- Header -->
+        <div class="border-b border-slate-100 pb-6">
+            <h1 class="text-3xl font-extrabold text-slate-800">About Sinendaba Charity Centre</h1>
+            <p class="text-slate-500 mt-2">Serving Tembisa and Gauteng with warmth, compassion, and dignity since 2015.</p>
+        </div>
+
+        <!-- History Section -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div class="space-y-4">
+                <h2 class="text-2xl font-bold text-slate-800 flex items-center gap-2">
+                    <i class="fa-solid fa-landmark text-emerald-600"></i> Our History
+                </h2>
+                <p class="text-slate-600 leading-relaxed">
+                    Sinendaba Charity Center is all about providing for the less privileged community. It is based in Tembisa and famously known for their generosity and warmth towards both homeless children and adults.
+                </p>
+                <p class="text-slate-600 leading-relaxed">
+                    It was founded by <strong>Gomolemo Keetse</strong> and <strong>Ntando Motau</strong> in 2015. Not only does it cater for the homeless but also those that don’t have the means to nutritiously provide for their households.
+                </p>
+            </div>
+            <div class="rounded-xl overflow-hidden shadow-md">
+                <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?q=80&w=800&auto=format&fit=crop" alt="Sinendaba Food Distribution in Tembisa" class="w-full h-64 object-cover" loading="lazy">
+            </div>
+        </div>
+
+        <!-- Mission & Vision Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
+            <div class="bg-slate-50 p-6 rounded-xl border-l-4 border-emerald-500 shadow-sm">
+                <h2 class="text-xl font-bold text-slate-800 mb-2 flex items-center gap-2">
+                    <i class="fa-solid fa-bullseye text-emerald-600"></i> Our Mission
+                </h2>
+                <p class="text-slate-600 leading-relaxed">
+                    To serve, protect and support children and adults by providing shelter, warm beds, nutritious meals, hygiene, and other basic needs for a better and brighter future.
+                </p>
+            </div>
+            <div class="bg-slate-50 p-6 rounded-xl border-l-4 border-emerald-500 shadow-sm">
+                <h2 class="text-xl font-bold text-slate-800 mb-2 flex items-center gap-2">
+                    <i class="fa-solid fa-eye text-emerald-600"></i> Our Vision
+                </h2>
+                <p class="text-slate-600 leading-relaxed">
+                    A center that offers a better world for the community with love and warmth.
+                </p>
+            </div>
+        </div>
+
+        <!-- Our Team Section -->
+        <div class="pt-6">
+            <h2 class="text-2xl font-bold text-slate-800 mb-6 flex items-center gap-2">
+                <i class="fa-solid fa-users text-slate-700"></i> Our Dedicated Team
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
+                    <div class="font-bold text-slate-800">Gomolemo Keetse & Ntando Motau</div>
+                    <div class="text-xs text-emerald-600 font-semibold uppercase mt-1">Founders</div>
+                </div>
+                <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
+                    <div class="font-bold text-slate-800">David Solomon</div>
+                    <div class="text-xs text-emerald-600 font-semibold uppercase mt-1">Director</div>
+                </div>
+                <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
+                    <div class="font-bold text-slate-800">Paul Adams</div>
+                    <div class="text-xs text-emerald-600 font-semibold uppercase mt-1">Program Manager</div>
+                </div>
+                <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
+                    <div class="font-bold text-slate-800">Phindile Shoko & Sphiwe Mahlangu</div>
+                    <div class="text-xs text-emerald-600 font-semibold uppercase mt-1">Marketing Team</div>
+                </div>
+            </div>
+            <div class="mt-4 p-4 bg-slate-50 rounded-lg border border-slate-200">
+                <div class="font-bold text-slate-800">Nobuhle Komane, Sipho Dlamini & Sakhile Mathabe</div>
+                <div class="text-xs text-slate-500 font-semibold uppercase mt-1">Administrative Staff</div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer class="bg-slate-900 text-slate-400 mt-auto border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 py-10 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 text-center md:text-left">
+            <div>
+                <h3 class="text-white font-bold text-lg mb-3">Sinendaba Charity Centre</h3>
+                <p class="text-xs text-slate-400 leading-relaxed">Providing shelter, warm meals, food packs, and education support across Tembisa, Soweto, Soshanguve, and Gauteng.</p>
+            </div>
+            <div>
+                <h3 class="text-white font-bold text-lg mb-3">Quick Links</h3>
+                <div class="flex flex-col space-y-2 text-xs">
+                    <a href="index.html" class="hover:text-emerald-400">Home</a>
+                    <a href="about.html" class="hover:text-emerald-400">About Us</a>
+                    <a href="services.html" class="hover:text-emerald-400">Services & Programs</a>
+                    <a href="enquiry.html" class="hover:text-emerald-400">Enquiry Form</a>
+                    <a href="contact.html" class="hover:text-emerald-400">Contact & Map</a>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-white font-bold text-lg mb-3">Connect & Share (Social Media)</h3>
+                <div class="flex justify-center md:justify-start space-x-4 mb-4 text-xl">
+                    <a href="https://facebook.com/SinendabaCharity" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-emerald-400 transition" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://twitter.com/SinendabaOrg" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-emerald-400 transition" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://instagram.com/SinendabaCharity" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-emerald-400 transition" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://linkedin.com/company/sinendaba-charity" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-emerald-400 transition" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <div class="text-xs text-slate-500">
+                    <p class="font-semibold text-slate-400">Local Directory Listings & Backlinks:</p>
+                    <p><a href="https://www.gov.za" target="_blank" rel="noopener" class="hover:underline text-slate-400">Gauteng NPO Directory</a> | <a href="https://www.tshwane.gov.za" target="_blank" rel="noopener" class="hover:underline text-slate-400">Local Community Hub</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="pt-6 border-t border-slate-800 text-center text-xs">
+            <p>&copy; 2026 Sinendaba Charity Centre (NPO). Dedicated to Community Empowerment in Gauteng.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery & Leaflet JS with Defer/Optimization -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Security & Page Speed Meta Tags -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Get in touch with Sinendaba Charity Centre to volunteer, request assistance, or inquire about community programs.">
+    <meta name="keywords" content="Enquiry, contact form, volunteer Gauteng, charity support, request food packs">
+    <meta name="author" content="Sinendaba Charity Centre">
+    <link rel="canonical" href="https://www.sinendaba.org/index.html">
+
+    <!-- Social Media (Open Graph & Twitter Cards for Off-Page SEO) -->
+    <meta property="og:title" content="Enquiry Form | Sinendaba Charity Centre">
+    <meta property="og:description" content="Get in touch with Sinendaba Charity Centre to volunteer, request assistance, or inquire about community programs.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.sinendaba.org/">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=1200&auto=format&fit=crop">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Enquiry Form | Sinendaba Charity Centre">
+    <meta name="twitter:description" content="Get in touch with Sinendaba Charity Centre to volunteer, request assistance, or inquire about community programs.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=1200&auto=format&fit=crop">
+
+    <title>Enquiry Form | Sinendaba Charity Centre</title>
+    
+    <!-- Resource Hints for Page Speed optimization -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            slate: '#2c3e50',
+                            green: '#27ae60',
+                            blue: '#3498db',
+                            dark: '#1a252f',
+                            light: '#f8fafc'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Local SEO JSON-LD Structured Data Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NGO",
+      "name": "Sinendaba Charity Centre",
+      "url": "https://www.sinendaba.org",
+      "logo": "https://www.sinendaba.org/logo.png",
+      "foundingDate": "2015",
+      "founders": [
+        { "@type": "Person", "name": "Gomolemo Keetse" },
+        { "@type": "Person", "name": "Ntando Motau" }
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Tembisa",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-25.9964",
+        "longitude": "28.2268"
+      },
+      "telephone": "+27827658796",
+      "email": "info@Sinendaba.org",
+      "sameAs": [
+        "https://facebook.com/SinendabaCharity",
+        "https://twitter.com/SinendabaOrg",
+        "https://instagram.com/SinendabaCharity"
+      ]
+    }
+    </script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen"><nav class="bg-slate-800 text-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-full bg-emerald-500 flex items-center justify-center font-bold text-white shadow-sm text-lg">S</div>
+                <a href="index.html" class="font-bold text-xl tracking-tight text-white hover:text-emerald-400 transition">Sinendaba Charity Centre</a>
+            </div>
+            <div class="hidden md:flex items-center space-x-1 font-medium text-sm">
+                <a href="index.html" class="nav-link px-3 py-2 rounded-md hover:bg-slate-700 transition">Home</a>
+                <a href="about.html" class="nav-link px-3 py-2 rounded-md hover:bg-slate-700 transition">About Us</a>
+                <a href="services.html" class="nav-link px-3 py-2 rounded-md hover:bg-slate-700 transition">Services</a>
+                <a href="enquiry.html" class="nav-link px-3 py-2 rounded-md hover:bg-slate-700 transition">Enquiry</a>
+                <a href="contact.html" class="nav-link px-3 py-2 rounded-md hover:bg-slate-700 transition">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-btn" class="p-2 rounded-md text-slate-300 hover:text-white hover:bg-slate-700 focus:outline-none" aria-label="Toggle Navigation Menu">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-slate-900 px-4 pt-2 pb-4 space-y-1 text-sm border-t border-slate-800">
+        <a href="index.html" class="block px-3 py-2 rounded-md text-slate-200 hover:bg-slate-800">Home</a>
+        <a href="about.html" class="block px-3 py-2 rounded-md text-slate-200 hover:bg-slate-800">About Us</a>
+        <a href="services.html" class="block px-3 py-2 rounded-md text-slate-200 hover:bg-slate-800">Services</a>
+        <a href="enquiry.html" class="block px-3 py-2 rounded-md text-slate-200 hover:bg-slate-800">Enquiry</a>
+        <a href="contact.html" class="block px-3 py-2 rounded-md text-slate-200 hover:bg-slate-800">Contact</a>
+    </div>
+</nav>
+<main class="flex-grow max-w-4xl mx-auto px-4 py-10 sm:px-6 lg:px-8 w-full">
+    <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 sm:p-10">
+        <h1 class="text-3xl font-extrabold text-slate-800 mb-2">Enquiry Form</h1>
+        <p class="text-slate-600 text-sm mb-8">Have a question or want to collaborate? Fill in the details below and our program team will respond shortly.</p>
+
+        <form id="enquiry-form" action="submit_enquiry.php" method="post" class="space-y-6" novalidate>
+            <div>
+                <label for="name" class="block text-sm font-semibold text-slate-700 mb-1">Full Name *</label>
+                <input type="text" id="name" name="name" required class="w-full px-4 py-2.5 bg-slate-50 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:bg-white transition" placeholder="e.g. Sipho Ndlovu" maxlength="100">
+                <p class="error-msg hidden mt-1 text-xs text-red-600" data-for="name"></p>
+            </div>
+
+            <div>
+                <label for="email" class="block text-sm font-semibold text-slate-700 mb-1">Email Address *</label>
+                <input type="email" id="email" name="email" required class="w-full px-4 py-2.5 bg-slate-50 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:bg-white transition" placeholder="e.g. sipho@example.com">
+                <p class="error-msg hidden mt-1 text-xs text-red-600" data-for="email"></p>
+            </div>
+
+            <div>
+                <label for="phone" class="block text-sm font-semibold text-slate-700 mb-1">Phone Number (optional)</label>
+                <input type="tel" id="phone" name="phone" class="w-full px-4 py-2.5 bg-slate-50 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:bg-white transition" placeholder="e.g. 082 123 4567" maxlength="20">
+                <p class="error-msg hidden mt-1 text-xs text-red-600" data-for="phone"></p>
+            </div>
+
+            <div>
+                <label for="subject" class="block text-sm font-semibold text-slate-700 mb-1">Enquiry Type *</label>
+                <select id="subject" name="subject" required class="w-full px-4 py-2.5 bg-slate-50 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:bg-white transition">
+                    <option value="">-- Please choose an option --</option>
+                    <option value="general">General Inquiry</option>
+                    <option value="volunteer">Volunteer Opportunity</option>
+                    <option value="food-request">Request Food Assistance</option>
+                    <option value="sponsor">Become a Sponsor</option>
+                    <option value="donation">Donation / Partnership</option>
+                </select>
+                <p class="error-msg hidden mt-1 text-xs text-red-600" data-for="subject"></p>
+            </div>
+
+            <div>
+                <label for="message" class="block text-sm font-semibold text-slate-700 mb-1">Your Message *</label>
+                <textarea id="message" name="message" required rows="5" class="w-full px-4 py-2.5 bg-slate-50 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:bg-white transition" placeholder="Write your enquiry message here..." maxlength="1000"></textarea>
+                <p class="error-msg hidden mt-1 text-xs text-red-600" data-for="message"></p>
+            </div>
+
+            <button type="submit" class="w-full sm:w-auto px-6 py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold rounded-lg shadow-sm transition">Submit Enquiry</button>
+        </form>
+
+        <!-- Validated enquiry response (shown after successful validation) -->
+        <div id="enquiry-response" class="hidden mt-8 rounded-lg border border-emerald-200 bg-emerald-50 p-6" role="status" aria-live="polite">
+            <div class="flex items-start gap-3">
+                <i class="fa-solid fa-circle-check text-emerald-600 text-2xl mt-0.5"></i>
+                <div class="flex-1">
+                    <h2 id="response-title" class="text-lg font-bold text-emerald-800 mb-1"></h2>
+                    <div id="response-body" class="text-sm text-emerald-900 space-y-2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer class="bg-slate-900 text-slate-400 mt-auto border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 py-10 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 text-center md:text-left">
+            <div>
+                <h3 class="text-white font-bold text-lg mb-3">Sinendaba Charity Centre</h3>
+                <p class="text-xs text-slate-400 leading-relaxed">Providing shelter, warm meals, food packs, and education support across Tembisa, Soweto, Soshanguve, and Gauteng.</p>
+            </div>
+            <div>
+                <h3 class="text-white font-bold text-lg mb-3">Quick Links</h3>
+                <div class="flex flex-col space-y-2 text-xs">
+                    <a href="index.html" class="hover:text-emerald-400">Home</a>
+                    <a href="about.html" class="hover:text-emerald-400">About Us</a>
+                    <a href="services.html" class="hover:text-emerald-400">Services & Programs</a>
+                    <a href="enquiry.html" class="hover:text-emerald-400">Enquiry Form</a>
+                    <a href="contact.html" class="hover:text-emerald-400">Contact & Map</a>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-white font-bold text-lg mb-3">Connect & Share (Social Media)</h3>
+                <div class="flex justify-center md:justify-start space-x-4 mb-4 text-xl">
+                    <a href="https://facebook.com/SinendabaCharity" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-emerald-400 transition" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://twitter.com/SinendabaOrg" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-emerald-400 transition" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://instagram.com/SinendabaCharity" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-emerald-400 transition" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://linkedin.com/company/sinendaba-charity" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-emerald-400 transition" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <div class="text-xs text-slate-500">
+                    <p class="font-semibold text-slate-400">Local Directory Listings & Backlinks:</p>
+                    <p><a href="https://www.gov.za" target="_blank" rel="noopener" class="hover:underline text-slate-400">Gauteng NPO Directory</a> | <a href="https://www.tshwane.gov.za" target="_blank" rel="noopener" class="hover:underline text-slate-400">Local Community Hub</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="pt-6 border-t border-slate-800 text-center text-xs">
+            <p>&copy; 2026 Sinendaba Charity Centre (NPO). Dedicated to Community Empowerment in Gauteng.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery & Leaflet JS with Defer/Optimization -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="script.js"></script>
+
+<!-- Enquiry form validation & response handling -->
+<script>
+(function () {
+    var form = document.getElementById('enquiry-form');
+    if (!form) return;
+
+    var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+    var PHONE_RE = /^[0-9+\s()-]{7,20}$/;
+
+    function showError(field, msg) {
+        var input = document.getElementById(field);
+        var p = form.querySelector('.error-msg[data-for="' + field + '"]');
+        if (input) input.classList.add('border-red-500', 'ring-1', 'ring-red-400');
+        if (p) { p.textContent = msg; p.classList.remove('hidden'); }
+    }
+    function clearError(field) {
+        var input = document.getElementById(field);
+        var p = form.querySelector('.error-msg[data-for="' + field + '"]');
+        if (input) input.classList.remove('border-red-500', 'ring-1', 'ring-red-400');
+        if (p) { p.textContent = ''; p.classList.add('hidden'); }
+    }
+    function esc(s) {
+        return String(s).replace(/[&<>"']/g, function (c) {
+            return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+        });
+    }
+
+    // Response content keyed by enquiry type (cost / availability / relevant info)
+    var RESPONSES = {
+        'general': {
+            title: 'Thanks for reaching out!',
+            body: 'Your general enquiry has been received. Our program team typically replies within <strong>1\u20132 business days</strong>. There is no cost for general information requests.'
+        },
+        'volunteer': {
+            title: 'Welcome aboard, future volunteer!',
+            body: 'Volunteer placements are <strong>currently available</strong> at our Tembisa centre. Volunteering is <strong>free to join</strong> \u2014 we ask for a minimum commitment of <strong>4 hours per week</strong>. A coordinator will contact you to arrange an orientation session.'
+        },
+        'food-request': {
+            title: 'Food assistance request received',
+            body: 'Food packs are <strong>available weekly</strong> (Mondays & Thursdays, 09:00\u201313:00). This service is provided at <strong>no cost</strong> to qualifying families. Please bring an ID document when collecting. We will confirm your allocation by email.'
+        },
+        'sponsor': {
+            title: 'Thank you for considering sponsorship',
+            body: 'Sponsorship packages start from <strong>R500 / month</strong> (child education support) up to <strong>R5 000 / month</strong> (full family package). Availability is <strong>open all year</strong>. Our partnerships officer will send you a sponsor pack with full pricing.'
+        },
+        'donation': {
+            title: 'Thank you for your generosity',
+            body: 'Donations and partnerships can be arranged at <strong>any amount</strong> and are always welcome. Section 18A tax certificates are <strong>available</strong> on request. A member of our team will share banking and partnership details shortly.'
+        }
+    };
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var valid = true;
+
+        var name = document.getElementById('name').value.trim();
+        var email = document.getElementById('email').value.trim();
+        var phone = document.getElementById('phone').value.trim();
+        var subject = document.getElementById('subject').value;
+        var message = document.getElementById('message').value.trim();
+
+        ['name', 'email', 'phone', 'subject', 'message'].forEach(clearError);
+
+        if (name.length < 2) { showError('name', 'Please enter your full name (at least 2 characters).'); valid = false; }
+        if (!EMAIL_RE.test(email)) { showError('email', 'Please enter a valid email address.'); valid = false; }
+        if (phone && !PHONE_RE.test(phone)) { showError('phone', 'Please enter a valid phone number.'); valid = false; }
+        if (!subject) { showError('subject', 'Please select an enquiry type.'); valid = false; }
+        if (message.length < 10) { showError('message', 'Please provide a message of at least 10 characters.'); valid = false; }
+
+        if (!valid) {
+            var firstErr = form.querySelector('.border-red-500');
+            if (firstErr) firstErr.focus();
+            return;
+        }
+
+        var r = RESPONSES[subject] || RESPONSES['general'];
+        var box = document.getElementById('enquiry-response');
+        document.getElementById('response-title').textContent = r.title;
+        document.getElementById('response-body').innerHTML =
+            '<p>Hi <strong>' + esc(name) + '</strong>, ' + r.body + '</p>' +
+            '<p class="text-xs text-emerald-700 mt-2">A copy of this response will be sent to <strong>' + esc(email) + '</strong>.</p>';
+        box.classList.remove('hidden');
+        box.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        form.reset();
+    });
+})();
+</script>
+</body>
+</html>
